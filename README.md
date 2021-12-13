@@ -15,8 +15,8 @@ CREATE DATABASE janesDb
 CREATE USER joe SET PASSWORD 'joespass' SET HOME DATABASE joesDb
 CREATE USER jane SET PASSWORD 'janespass' SET HOME DATABASE janesDb
 CREATE ROLE impersonated
-GRANT ALL GRAPH PRIVILEGES ON HOME GRAPH TO impersonated
 GRANT ROLE impersonated TO joe,jane
+GRANT ALL GRAPH PRIVILEGES ON HOME GRAPH TO impersonated
 CREATE ROLE impersonator
 GRANT IMPERSONATE (joe, jane) ON DBMS TO impersonator
 GRANT ROLE impersonator TO neo4j
