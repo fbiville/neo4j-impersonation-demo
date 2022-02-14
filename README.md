@@ -45,7 +45,7 @@ CREATE (:FavouriteMovie {title: 'The Matrix'})
 go run ./cmd/autocommit
 ```
 
-`neo4j` impersonating `jane` in autocommit transaction:
+`neo4j` impersonating `jane` in a transaction function:
 
 ```shell
 go run ./cmd/tx_func
